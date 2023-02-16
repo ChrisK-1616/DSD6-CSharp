@@ -7,7 +7,9 @@
 
 using FSM;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using TutorialGame.Engine;
+using TutorialGame.UI;
 
 namespace TutorialGame.States
 {
@@ -24,9 +26,17 @@ namespace TutorialGame.States
         public bool Configured { get { return Initialised && ContentLoaded; } } 
         public bool Enabled { get; protected set; }
         public bool Visible { get; protected set; }
+        public List<GameObject> GameObjects { get; protected set; }
+        public List<UIObject> UIObjects { get; protected set; }
 
         protected GameState(MainGame mainGame, FSM.FSM fsm, string name) :
-            base(fsm, name) { MainGame = mainGame; Initialised = ContentLoaded = Enabled = false; }
+            base(fsm, name)
+        {
+            MainGame = mainGame;
+            Initialised = ContentLoaded = Enabled = Visible = false;
+            GameObjects = new List<GameObject>();
+            UIObjects = new List<UIObject>();
+        }
 
         public bool Enable()
         {
