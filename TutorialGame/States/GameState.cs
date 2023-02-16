@@ -34,8 +34,8 @@ namespace TutorialGame.States
         {
             MainGame = mainGame;
             Initialised = ContentLoaded = Enabled = Visible = false;
-            GameObjects = new List<GameObject>();
-            UIObjects = new List<UIObject>();
+            GameObjects = new Dictionary<string, GameObject>();
+            UIObjects = new Dictionary<string, UIObject>();
         }
 
         public bool Enable()
