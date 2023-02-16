@@ -84,7 +84,8 @@ namespace TutorialGame.Engine
 
         private GameConsts() { }
 
-        public const string GAME_NAME = "Tutorial Game";
+        public const string GAME_VERSION = "v0.1.0-Alpha.1";
+        public const string GAME_NAME = $"Tutorial Game [{GAME_VERSION}]";
 
         public const string CONTENT_ROOT_DIR = "Content";
         public const string CONTENT_IMAGES_DIR = "Images";
