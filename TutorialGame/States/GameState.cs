@@ -26,8 +26,8 @@ namespace TutorialGame.States
         public bool Configured { get { return Initialised && ContentLoaded; } } 
         public bool Enabled { get; protected set; }
         public bool Visible { get; protected set; }
-        public List<GameObject> GameObjects { get; protected set; }
-        public List<UIObject> UIObjects { get; protected set; }
+        public Dictionary<string, GameObject> GameObjects { get; protected set; }
+        public Dictionary<string, UIObject> UIObjects { get; protected set; }
 
         protected GameState(MainGame mainGame, FSM.FSM fsm, string name) :
             base(fsm, name)
