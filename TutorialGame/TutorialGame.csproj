@@ -32,7 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSM">
-      <HintPath>..\..\..\FSM\FSM\bin\Debug\net7.0\FSM.dll</HintPath>
+      <HintPath>..\..\..\FSM\FSM\bin\Release\net7.0\FSM.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
