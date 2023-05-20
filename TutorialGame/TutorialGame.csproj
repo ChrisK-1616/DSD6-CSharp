@@ -13,6 +13,11 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Data Model\**" />
+    <EmbeddedResource Remove="Data Model\**" />
+    <None Remove="Data Model\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Icon.ico" />
     <None Remove="Icon.bmp" />
   </ItemGroup>
@@ -26,10 +31,9 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FSM\FSM.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data Model\" />
+    <Reference Include="FSM">
+      <HintPath>..\..\..\FSM\FSM\bin\Debug\net7.0\FSM.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
     <Message Text="Restoring dotnet tools" Importance="High" />
